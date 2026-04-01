@@ -13,9 +13,12 @@ main{
     height: 100%;
     width: 100%;
 
-    background-image: url(/mac-wallpaper.jpg);
+    background-image: url(./mac-wallpaper.jpg);
     background-size: cover;
     background-position: center;
+
+    position: relative;
+    overflow: hidden;
 
 }
 body {

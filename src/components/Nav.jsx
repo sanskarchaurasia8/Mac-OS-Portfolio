@@ -2,7 +2,7 @@ import React from "react";
 import './nav.scss';
 import DateTime from "./DateTime";
 
-const Nav = () => {
+const Nav = ({ onIconClick }) => {
     return (
        <nav>
         <div className="left">
@@ -18,16 +18,16 @@ const Nav = () => {
                 <p>File</p>
             </div>
 
-            <div className="nav-item">
-                <p>Window</p>
-            </div>
-
-            <div className="nav-item">
+            <div className="nav-item" onClick={() => onIconClick('terminal')}>
                 <p>Terminal</p>
             </div>
 
-            <div className="nav-item">
-                <p>Browser</p>
+            <div className="nav-item" onClick={() => onIconClick('note')}>
+                <p>Notes</p>
+            </div>
+
+            <div className="nav-item" onClick={() => onIconClick('github')}>
+                <p>GitHub</p>
             </div>
 
         </div>
@@ -44,5 +44,6 @@ const Nav = () => {
             
     )
 }
+
 
 export default Nav;

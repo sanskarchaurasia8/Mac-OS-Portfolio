@@ -2,7 +2,7 @@ import React from 'react';
 import {Rnd} from 'react-rnd';
 import './window.scss';
 
-const MacWindow = ({children, width = "40vw", height = "40vh"})=>{
+const MacWindow = ({children, title = "zsh", onClose, width = "40vw", height = "40vh"})=>{
     return (
         <Rnd
         default ={{
@@ -15,11 +15,11 @@ const MacWindow = ({children, width = "40vw", height = "40vh"})=>{
             <div className="window">
                 <div className="nav">
                     <div className="dots">
-                        <div className="dot red"></div>
+                        <div className="dot red" onClick={onClose} style={{cursor: 'pointer'}}></div>
                         <div className="dot yellow"></div>
                         <div className="dot green"></div>
                     </div>
-                    <div className="title"><p>sanskarchaurasia - zsh</p></div>
+                    <div className="title"><p>sanskarchaurasia — {title}</p></div>
                 </div>
                 <div className="main-content">
                     {children}

@@ -1,0 +1,70 @@
+.cli-window {
+  background-color: #0c0c0c;
+  color: #d1d1d1;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', Courier, monospace;
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  .terminal-history {
+    margin-bottom: 10px;
+    
+    .history-item {
+      margin-bottom: 8px;
+      
+      .prompt {
+        color: #27c93f;
+        font-weight: bold;
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+      
+      .command {
+        color: #fff;
+      }
+      
+      .output {
+        display: block;
+        margin-top: 4px;
+        color: #d1d1d1;
+        white-space: pre-wrap;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .input-area {
+    display: flex;
+    align-items: center;
+    background: transparent;
+
+    .prompt {
+      color: #27c93f;
+      font-weight: bold;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      flex-grow: 1;
+      caret-color: #fff;
+    }
+  }
+
+  /* Custom Scrollbar for Terminal */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a;
+    border-radius: 3px;
+  }
+}

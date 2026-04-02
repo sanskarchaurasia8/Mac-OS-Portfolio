@@ -12,7 +12,7 @@ const GitCard = ({data={id:1,image:"",title:"",description:"",tags:[],repoLink:"
 
         <div className="tags">
             {
-            data.tags.map(tag => <p className='tag'>{tag}</p>)
+            data.tags.map(tag => <p className='tag' key={tag}>{tag}</p>)
             }
         </div>
 
@@ -24,12 +24,12 @@ const GitCard = ({data={id:1,image:"",title:"",description:"",tags:[],repoLink:"
     </div>
 }
 
-const Github = ()=> {
+const Github = ({ onClose })=> {
     return(
-        <MacWindow>
+        <MacWindow title="GitHub" onClose={onClose}>
             <div className="cards">
                 {githubData.map(project => {
-                    return <GitCard data={project} />
+                    return <GitCard data={project} key={project.id} />
                 })}
             </div>
         </MacWindow>

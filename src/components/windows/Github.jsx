@@ -24,9 +24,9 @@ const GitCard = ({data={id:1,image:"",title:"",description:"",tags:[],repoLink:"
     </div>
 }
 
-const Github = ({ onClose })=> {
+const Github = ({ onClose, onMinimize, onFullscreen, isFullscreen })=> {
     return(
-        <MacWindow title="GitHub" onClose={onClose}>
+        <MacWindow title="GitHub" onClose={onClose} onMinimize={onMinimize} onFullscreen={onFullscreen} isFullscreen={isFullscreen}>
             <div className="cards">
                 {githubData.map(project => {
                     return <GitCard data={project} key={project.id} />

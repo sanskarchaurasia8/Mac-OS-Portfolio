@@ -3,9 +3,9 @@ import MacWindow from './MacWindow';
 import './spotify.scss';
 
 
-const Spotify = ({ onClose })=>{
+const Spotify = ({ onClose, onMinimize, onFullscreen, isFullscreen })=>{
     return(
-            <MacWindow width='20vw' height='20vh' title="Spotify" onClose={onClose}>
+            <MacWindow width='20vw' height='20vh' title="Spotify" onClose={onClose} onMinimize={onMinimize} onFullscreen={onFullscreen} isFullscreen={isFullscreen}>
                 <div className="spotify-window">
                     <iframe data-testid="embed-iframe" style={{borderRadius:"12px"}} 
                     src="https://open.spotify.com/embed/album/4jlyYLklV3kTBA6trX3bpj?utm_source=generator&theme=0" 

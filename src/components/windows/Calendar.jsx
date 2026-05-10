@@ -1,9 +1,9 @@
 import React from 'react';
 import MacWindow from './MacWindow';
 
-const Calendar = ({ onClose }) => {
+const Calendar = ({ onClose, onMinimize, onFullscreen, isFullscreen }) => {
   return (
-    <MacWindow title="Calendar" onClose={onClose}>
+    <MacWindow title="Calendar" onClose={onClose} onMinimize={onMinimize} onFullscreen={onFullscreen} isFullscreen={isFullscreen}>
       <div style={{
         display: 'flex',
         flexDirection: 'column',

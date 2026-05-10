@@ -1,0 +1,46 @@
+.context-menu {
+  position: absolute;
+  z-index: 9999;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 160px;
+  padding: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: white;
+  animation: fadeIn 0.1s ease-out;
+
+  .menu-item {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.1s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    &.danger {
+      color: #ff453a;
+      &:hover {
+        background: #ff453a;
+        color: white;
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

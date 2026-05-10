@@ -1,7 +1,7 @@
 import React from 'react';
 import MacWindow from './MacWindow';
 
-const Mail = ({ onClose }) => {
+const Mail = ({ onClose, onMinimize, onFullscreen, isFullscreen }) => {
   const emails = [
     { id: 1, sender: 'Apple', subject: 'Your Receipt', date: 'Yesterday', icon: '' },
     { id: 2, sender: 'GitHub', subject: 'Your GitHub Star Count Just Went Up!', date: '2 days ago', icon: 'G' },
@@ -10,7 +10,7 @@ const Mail = ({ onClose }) => {
   ];
 
   return (
-    <MacWindow title="Mail" onClose={onClose}>
+    <MacWindow title="Mail" onClose={onClose} onMinimize={onMinimize} onFullscreen={onFullscreen} isFullscreen={isFullscreen}>
       <div style={{
         display: 'flex',
         height: '100%',

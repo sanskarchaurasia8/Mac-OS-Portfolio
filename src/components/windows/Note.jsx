@@ -6,7 +6,7 @@ import MacWindow from './MacWindow';
 import './note.scss';
 
 
-const  Note = ({ onClose })=>{
+const  Note = ({ onClose, onMinimize, onFullscreen, isFullscreen })=>{
 
     const [markdown, setMarkdown] = useState(null)
 
@@ -17,7 +17,7 @@ const  Note = ({ onClose })=>{
     }, [])
 
     return(
-        <MacWindow title="Notes" onClose={onClose}>
+        <MacWindow title="Notes" onClose={onClose} onMinimize={onMinimize} onFullscreen={onFullscreen} isFullscreen={isFullscreen}>
             <div className="note-window">
                 {markdown ? <SyntaxHighlighter language='typescript' style={atelierDuneDark}>{markdown}</SyntaxHighlighter> : <p>Loading...</p>}
             </div>
